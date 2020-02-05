@@ -1,0 +1,2 @@
+#!/bin/bash
+tcc -c $CFILE > c.o
