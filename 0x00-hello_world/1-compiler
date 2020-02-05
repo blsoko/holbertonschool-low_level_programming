@@ -1,2 +1,2 @@
 #!/bin/bash
-tcc -c $CFILE > $c.o
+gcc -c $CFILE > c.o
