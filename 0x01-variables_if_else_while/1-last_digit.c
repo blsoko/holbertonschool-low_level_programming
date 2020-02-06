@@ -10,12 +10,12 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-	int n;
+	int n, tmpnum;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	int tmpnum = tmpnum + n;
+	tmpnum = n;
 
 	n = n % 10;
 
@@ -31,9 +31,6 @@ int main(void)
 	{
 		printf("Last digit of %d is %d and is 0\n", tmpnum, n);
 	}
-
-	tmpnum = 0;
-	n = 0;
 
 	return (0);
 }
