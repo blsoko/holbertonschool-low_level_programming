@@ -24,7 +24,6 @@ int main(void)
 		countnum1++;
 		if (countnum1 == 26)
 		{
-			putchar('$');
 			putchar('\n');
 			countnum1 = 0;
 			break;
