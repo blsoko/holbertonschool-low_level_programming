@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h> 
 /**
  * main - Entry point
  *
@@ -7,9 +8,6 @@
  */
 int main(void)
 {
-	char str1[60];
-
-	strcpy(str1, "and that piece of art is useful\" - Dora Korpar, 2015-10-19");
-	puts(str1);
+	system ("and that piece of art is useful\" - Dora Korpar, 2015-10-19");
 	return (1);
 }
