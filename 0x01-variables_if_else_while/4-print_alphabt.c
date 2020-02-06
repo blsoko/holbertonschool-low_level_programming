@@ -11,7 +11,7 @@ int main(void)
 
 	int countnum = 0;
 
-	while (countnum <= 26)
+	while (countnum < 26)
 	{
 		if (countnum != 4 && countnum != 16)
 		{
