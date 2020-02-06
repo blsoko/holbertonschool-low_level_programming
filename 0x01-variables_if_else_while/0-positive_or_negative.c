@@ -9,7 +9,7 @@
  * Return: Always 0 (Success)
  */
 /* betty style doc for function main goes there */
-long main(void)
+int main(void)
 {
 	long n;
 
@@ -23,7 +23,7 @@ long main(void)
 	{
 		printf("%lu is positive\n", n);
 	}
-	else
+	else if (n == 0)
 	{
 		printf("%lu is zero\n", n);
 	}
