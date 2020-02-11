@@ -10,12 +10,14 @@
 
 int print_last_digit(int c)
 {
-	int tmp;
+	int tmp, modular;
 
 	if (c < 0)
 	{
-	tmp = (c * -1);
-	_putchar(tmp % 10 + '0');
+	modular = (c % 10);
+	tmp = (modular * -1);
+	
+	_putchar(tmp + '0');
 	return (tmp % 10);
 
 	}
