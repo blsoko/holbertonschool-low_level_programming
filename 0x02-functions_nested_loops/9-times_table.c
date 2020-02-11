@@ -21,9 +21,15 @@ void times_table(void)
 		snum = ((mx % 10) + '0');
 		if (fnum == '0')
 		{
+		if (column != 0)
+		{
 		_putchar(' ');
 		_putchar(snum);
-
+		}
+		else
+		{
+		_putchar(snum);
+		}
 		}
 		else
 		{
