@@ -16,7 +16,7 @@ int print_last_digit(int c)
 	{
 	modular = (c % 10);
 	tmp = (modular * -1);
-	
+
 	_putchar(tmp + '0');
 	return (tmp % 10);
 
