@@ -12,16 +12,17 @@ int main(void)
 {
 	long int f1, f2, result;
 	int count;
-	printf ("1, ");
-	printf ("2, ");
+
+	printf("1, ");
+	printf("2, ");
 	f1 = 1;
 	f2 = 2;
-	for (count = 0; count < 49; count++)
+	for (count = 0; count < 44; count++)
 	{
 		result = f1 + f2;
 		f1 = f2;
 		f2 = result;
-		if (count != 48)
+		if (count != 43)
 		{
 			printf("%ld, ", result);
 		}
