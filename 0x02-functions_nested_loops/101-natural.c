@@ -17,15 +17,15 @@ int main(void)
 	{
 		if (count % 3 == 0)
 		{
-			nm_3 = nm_3 + 3;
+			nm_3 += count;
 		}
 		else if (count % 5 == 0)
 		{
-			nm_5 = nm_5 + 5;
+			nm_5 += count;
 		}
 	}
 
 	result = nm_3 + nm_5;
 	printf("%d\n", result);
-	return (0);
+	return (result);
 }
