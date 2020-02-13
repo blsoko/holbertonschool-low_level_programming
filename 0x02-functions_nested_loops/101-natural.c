@@ -11,15 +11,21 @@
 
 int main(void)
 {
-	int num3, num5, result;
+	int count, nm_3, nm_5, result;
 
-	num3 = (1023 / 3);
-	num3 = num3 * 3;
+	for (count = 1; count < 1024; count++)
+	{
+		if (count % 3 == 0)
+		{
+			nm_3 = nm_3 + 3;
+		}
+		if (count % 5 == 0)
+		{
+			nm_5 = nm_5 + 5;
+		}
+	}
 
-	num5 = (1023 / 5);
-	num5 = num5 * 5;
-
-	result = num3 + num5;
+	result = nm_3 + nm_5;
 	printf("%d\n", result);
 	return (0);
 }
