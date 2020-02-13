@@ -17,11 +17,11 @@ int main(void)
 	{
 		if (count % 3 == 0)
 		{
-			nm_3 += count;
+			nm_3 = nm_3 + 3;
 		}
 		else if (count % 5 == 0)
 		{
-			nm_5 += count;
+			nm_5 = nm_5 + 5;
 		}
 	}
 
