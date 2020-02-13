@@ -11,21 +11,16 @@
 
 int main(void)
 {
-	int count, nm_3, nm_5, result;
+	int nm_3, count;
 
 	for (count = 0; count < 1024; count++)
 	{
-		if (count % 3 == 0)
+		if (count % 3 == 0 && count % 5 == 0)
 		{
 			nm_3 += count;
 		}
-		else if (count % 5 == 0)
-		{
-			nm_5 += count;
-		}
 	}
 
-	result = nm_3 + nm_5;
-	printf("%d\n", result);
-	return (result);
+	printf("%d\n", nm_3);
+	return (0);
 }
