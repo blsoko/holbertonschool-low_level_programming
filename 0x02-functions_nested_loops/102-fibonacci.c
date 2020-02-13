@@ -12,15 +12,16 @@ int main(void)
 {
 	long int f1, f2, result;
 	int count;
-
+	printf ("1, ");
+	printf ("2, ");
 	f1 = 1;
 	f2 = 2;
-	for (count = 0; count < 51; count++)
+	for (count = 0; count < 49; count++)
 	{
 		result = f1 + f2;
 		f1 = f2;
 		f2 = result;
-		if (count != 50)
+		if (count != 48)
 		{
 			printf("%ld, ", result);
 		}
