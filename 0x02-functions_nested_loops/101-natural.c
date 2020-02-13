@@ -19,7 +19,7 @@ int main(void)
 		{
 			nm_3 += count;
 		}
-		if (count % 5 == 0)
+		else if (count % 5 == 0)
 		{
 			nm_5 += count;
 		}
