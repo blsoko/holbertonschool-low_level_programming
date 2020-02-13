@@ -13,7 +13,7 @@ int main(void)
 {
 	int count, nm_3, nm_5, result;
 
-	for (count = 1; count < 1024; count++)
+	for (count = 0; count < 1024; count++)
 	{
 		if (count % 3 == 0)
 		{
