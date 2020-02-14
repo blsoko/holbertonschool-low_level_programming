@@ -8,30 +8,21 @@
  */
 void print_triangle(int size)
 {
-	int n_size, column, row, alm;
-	alm = 0;
-	n_size = size;
-	if (size > 0)
+	int var_aux, column, row, alm;
+
+	var_aux = 1;
+	for (row = 0; row < size; row++)
 	{
-		for (row = 0; row < n_size; row++)
+		for (column = var_aux; column < size; column++)
 		{
-			for(column = 0; column < size; column++)
-			{
-				_putchar(' ');
-				if (column == (size-1))
-					while(alm < (n_size - size))
-					{
-						_putchar(35);
-						alm++;
-					}	
-			}
-			column = 0;
-			size--;
-			_putchar('\n');
+			_putchar(' ');
 		}
-	}
-	else
-	{
+		for (alm = column; alm < (size + var_aux); alm++)
+		{
+			_putchar('#');
+		}
+		var_aux++;
 		_putchar('\n');
+
 	}
 }
