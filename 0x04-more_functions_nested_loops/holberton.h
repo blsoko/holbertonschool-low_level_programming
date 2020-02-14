@@ -12,4 +12,5 @@ void print_square(int size);
 void print_diagonal(int n);
 int main(void);
 void print_triangle(int size);
+void print_number(int n);
 #endif /* HOLBERTON */
