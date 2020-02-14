@@ -10,6 +10,8 @@ void print_triangle(int size)
 {
 	int var_aux, column, row, alm;
 
+	if (size > 0)
+	{
 	var_aux = 1;
 	for (row = 0; row < size; row++)
 	{
@@ -25,4 +27,10 @@ void print_triangle(int size)
 		_putchar('\n');
 
 	}
+	}
+	else
+	{
+		_putchar('\n');
+	}
 }
+
