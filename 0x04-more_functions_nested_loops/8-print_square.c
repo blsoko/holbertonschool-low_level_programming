@@ -8,7 +8,7 @@
 void print_square(int size)
 {
 	int column, row;
-	(size > 0)
+	if (size > 0)
 	{
 	for (column = 0; column < size; column++)
 	{
