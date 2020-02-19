@@ -10,6 +10,7 @@ void rev_string(char *s)
 {
 	int index, count, iterador;
 	char new[100000];
+
 	for (index = 0; s[index] != '\0' ; index++)
 	{
 	}
@@ -24,5 +25,4 @@ void rev_string(char *s)
 	{
 		s[count] = new[count];
 	}
-	
 }
