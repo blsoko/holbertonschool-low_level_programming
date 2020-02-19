@@ -9,7 +9,7 @@
 
 int _atoi(char *s)
 {
-	int cncel, ans;
+	int cncel, ans, aux;
 	int i = 0;
 	int signo = 1;
 
@@ -21,18 +21,25 @@ int _atoi(char *s)
 		{
 			signo *= -1;
 		}
-		else if (s[i] < 10 && s[i] >= 0)
+
+		if (s[i] < 10 && s[i] >= 0)
 		{
-			cncel = 1;
-			ans = ans * 10 + s[i];
-		}
-		i++;
-		else if (cncel == 1)
-		{
-			if (s[i + 1] < 10 && s[i + 1] >= 0)
+			for (aux = i; aux <= i; i++)
 			{
-				i = -1;
+				if (s[i] < 10 && s[i] >= 0)
+				{
+					cncel = 1;
+					ans = ans * 10 + s[i];
+				}
+				else
+				{
+					i = -1;
+				}
 			}
+		}
+		if (cncel == 1)
+		{
+			i = -1;
 		}
 	}
 	ans *= -1;
