@@ -30,6 +30,7 @@ int _atoi(char *s)
 		{
 				i = -1;
 		}
+		i++;
 	}
 	ans *= -1;
 	return (ans);
