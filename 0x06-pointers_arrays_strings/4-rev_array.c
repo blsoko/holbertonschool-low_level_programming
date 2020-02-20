@@ -20,7 +20,7 @@ void reverse_array(int *a, int n)
 		iterador--;
 		narray[iterador] = a[cont];
 	}
-	for (cont = 0; cont <= n; cont++)
+	for (cont = 0; cont < n; cont++)
 	{
 		a[cont] = narray[cont];
 	}
