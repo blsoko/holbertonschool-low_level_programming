@@ -26,7 +26,7 @@ int _atoi(char *s)
 			cncel = 1;
 			ans = ans * 10 + s[i];
 		}
-		else if (cncel == 1 && s[i] > '9' || s[i] < '0' )
+		else if (cncel == 1 && (s[i] > '9' || s[i] < '0' ))
 		{
 				i = -1;
 		}
