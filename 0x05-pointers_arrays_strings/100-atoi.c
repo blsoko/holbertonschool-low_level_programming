@@ -26,12 +26,9 @@ int _atoi(char *s)
 			cncel = 1;
 			ans = ans * 10 + s[i];
 		}
-		else if (cncel == 1)
+		else if (cncel == 1 && s[i] > 10 || s[i] <= 0 )
 		{
-			if (!(s[i] < 10 && s[i] >= 0) == false)
-			{
 				i = -1;
-			}
 		}
 	}
 	ans *= -1;
