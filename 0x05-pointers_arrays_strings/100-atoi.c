@@ -28,7 +28,7 @@ int _atoi(char *s)
 		}
 		else if (cncel == 1 && (s[i] > '9' || s[i] < '0' ))
 		{
-				i = -1;
+				break;
 		}
 		i++;
 	}
