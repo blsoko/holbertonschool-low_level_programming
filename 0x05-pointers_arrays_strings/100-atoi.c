@@ -8,7 +8,7 @@
  */
 int _atoi(char *s)
 {
-	int cncel, ans, aux;
+	int cncel, ans;
 	int i = 0;
 	int signo = 1;
 
@@ -19,7 +19,6 @@ int _atoi(char *s)
 		{
 			signo *= -1;
 		}
-
 		else if (s[i] <= '9' && s[i] >= '0')
 		{
 			cncel = 1;
@@ -33,4 +32,4 @@ int _atoi(char *s)
 	}
 	ans *= signo;
 	return (ans);
-}											 }
+}
