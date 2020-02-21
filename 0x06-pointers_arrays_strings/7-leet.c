@@ -10,9 +10,10 @@
 char *leet(char *d)
 {
 	int cont, i;
-	char a[6] = {'a','e','o','t','l'};
-	char A[6] = {'A','E','O','T','L'};
-	char n[6] = {'4','3','0','7','1'};
+	char a[6] = {'a', 'e', 'o', 't', 'l'};
+	char A[6] = {'A', 'E', 'O', 'T', 'L'};
+	char n[6] = {'4', '3', '0', '7', '1'};
+
 	for (cont = 0; d[cont]; cont++)
 	{
 		for (i = 0; a[i]; i++)
