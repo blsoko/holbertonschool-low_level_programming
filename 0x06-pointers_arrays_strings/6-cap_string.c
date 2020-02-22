@@ -7,25 +7,21 @@
 *
 * Return: Always 0 (Success)
 */
-char *cap_string(char *d);
+char *cap_string(char *d)
 {
-	int cont;
+	int cont, i;
+	char signs[] = {' ', '\n', '\t', ',', ';', '.', '!',
+	 '?', '"', '(', ')', '{', '}'};
 
-	for(cont = 0; d[cont] ; cont++)
+	for (cont = 0; d[cont] ; cont++)
 	{
-		
-		if (d[cont] == ' ' || d[cont] == ','d[cont] == ';' ||d[cont] == '.' ||d[cont] == '!')
+		for (i = 0; signs[i]; i++)
 		{
-
-	
-		}
-		else if (d[cont] == '?' ||d[cont] == '"' ||d[cont] == '(' ||d[cont] == ')' ||)
-		{
-
-		}
-		else if (d[cont] == '{' ||d[cont] == '}' ||)
-		{
-		
+			if (d[cont] == signs[i] && d[cont + 1]
+			 >= 97 && d[cont + 1] <= 122)
+			{
+				d[cont + 1] = d[cont + 1] - 32;
+			}
 		}
 	}
 	return (d);
