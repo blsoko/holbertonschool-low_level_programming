@@ -1,12 +1,12 @@
 #include "holberton.h"
-
+#include <stdio.h>
 /**
  * *_strchr - to another
  *
- * @*s: array pointer
+ * @s: array pointer
  * @c: what type of value
  *
- * Return - a multidemnsional array
+ * Return:  a multidemnsional array
  */
 
 char *_strchr(char *s, char c)
@@ -19,6 +19,10 @@ char *_strchr(char *s, char c)
 		{
 			return (s + count);
 		}
+	}
+	if (c == '\0')
+	{
+		return (s + count);
 	}
 	return (NULL);
 }
