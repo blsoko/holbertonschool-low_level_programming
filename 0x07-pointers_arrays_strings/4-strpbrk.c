@@ -24,9 +24,5 @@ char *_strpbrk(char *s, char *accept)
 			}
 		}
 	}
-	if (s[count] == '\0')
-	{
-		return (s + count);
-	}
 	return (NULL);
 }
