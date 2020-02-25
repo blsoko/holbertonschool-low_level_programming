@@ -3,11 +3,11 @@
 /**
  * *_memcpy - to another
  *
- * @*s: array pointer
- * @b: what type of value
+ * @dest: array pointer
+ * @src: what type of value
  * @n: until a number
  *
- * Return - a multidemnsional array
+ * Return: a multidemnsional array
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n)

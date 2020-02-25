@@ -3,11 +3,11 @@
 /**
  * *_memset - to another
  *
- * @*s: array pointer
+ * @s: array pointer
  * @b: what type of value
  * @n: until a number
  *
- * Return - a multidemnsional array
+ * Return: a multidemnsional array
  */
 
 char *_memset(char *s, char b, unsigned int n)
