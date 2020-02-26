@@ -1,13 +1,19 @@
 #include <stdio.h>
-#include <stdlib.h>
-main(){
-      char c;
 
-      c = 'a';
-      while(c <= 'z'){
-              printf("value %d char %c\n", c, c);
-              c = c+1;
-      }
+int factorial(int n)
+{
+	return (n * factorial(n - 1));
+	if (n == 0)
+	{
+		return (1);
+	}
+}
 
-      exit(EXIT_SUCCESS);
+int main(void)
+{
+	int f;
+	
+	f = factorial(5);
+	printf ("5! %d\n", f);
+	return (0);
 }
