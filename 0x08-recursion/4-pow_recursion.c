@@ -1,17 +1,24 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
- * _puts_recursion - function
- * @s: value
+ * _pow_recursion - function
+ * @x: value
+ * @y: value
  *
  * Return: value of function;
  */
 
 int _pow_recursion(int x, int y)
 {
-
-	if ()
+	if (y != 0)
 	{
-		_pow_recursion(x * y, y);
+		if (y < 0)
+		{
+			return (-1);
+		}
+		return (x * _pow_recursion(x, y - 1));
 	}
+	else
+		return (1);
 }
