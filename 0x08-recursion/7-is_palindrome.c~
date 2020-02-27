@@ -1,0 +1,34 @@
+#include "holberton.h"
+/**
+ * _strlen_recursion - function
+ * @s: value
+ *
+ * Return: value of function;
+ */
+
+
+int compare(char *p1, char *p2)
+{
+	
+	if (*p1 == *p2)
+	{
+		if (p1 + 1 == '\0')
+		{
+			return (1);
+		}
+		return(compare(p1 + 1,p2 - 1)); 
+	}
+	else
+	{
+		return (0);	
+	}
+}
+
+
+int is_palindrome(char *s)
+{
+	int length;
+
+	length = strlen(s);
+	return (compare(s, s + length - 1));
+}
