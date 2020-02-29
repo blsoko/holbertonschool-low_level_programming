@@ -16,6 +16,22 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
+			if (*argv[i] <  '0' && *argv[i] > '9')
+			{
+				mult += atoi(argv[i]);
+			}
+		}
+		if (i == argc)
+		{
+			return (0);
+		}
+	}
+	i = 0;
+
+	if (argc > 1)
+	{
+		for (i = 1; i < argc; i++)
+		{
 			if (*argv[i] >= '0' && *argv[i] <= '9')
 			{
 				mult += atoi(argv[i]);
