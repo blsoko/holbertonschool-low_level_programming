@@ -1,10 +1,17 @@
 #include <stdlib.h>
 #include <stdio.h>
-
-int main(int argc, char* argv[])
+/**
+ * main - check
+ *
+ * @argc: value
+ * @argv: value
+ *
+ * Return: check;
+ */
+int main(int argc, char *argv[])
 {
 	int i, mult = 0;
-	
+
 	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
@@ -15,16 +22,16 @@ int main(int argc, char* argv[])
 			}
 			else
 			{
-				printf ("Error\n");
-				return(1);
+				printf("Error\n");
+				return (1);
 			}
 		}
-		printf ("%d\n", mult);
-		return(0);
+		printf("%d\n", mult);
+		return (0);
 	}
 	else
 	{
-		printf ("Error\n");
-		return(1);
+		printf("Error\n");
+		return (1);
 	}
 }
