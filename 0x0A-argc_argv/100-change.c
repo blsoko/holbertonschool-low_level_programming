@@ -25,14 +25,16 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-	number = atoi(argv[1]);
-	if (atoi(argv[1]) < 0)
-	{
-		printf("0\n");
-		return (0);
-	}
-	while (number != 0)
-	{
+		if (atoi(argv[1]) < 0)
+		{
+			printf("0\n");
+			return (0);
+		}
+		else
+		{
+		number = atoi(argv[1]);
+		while (number != 0)
+		{
 		for (i = 0; i < 5; i++)
 		{
 			if (number % num[i] == 0)
@@ -41,6 +43,7 @@ int main(int argc, char *argv[])
 				number -= num[i];
 				break;
 			}
+		}
 		}
 	}
 	printf("%d\n", cents);
