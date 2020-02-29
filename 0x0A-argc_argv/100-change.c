@@ -12,16 +12,11 @@
 
 int main(int argc, char *argv[])
 {
-	int cents = 0;
+	int cents = 0; /*cantidad de monedas*/
 	int num[5] = {25, 10, 5, 2, 1};
-	int number;
+	int number; /*lo que tengo que devolver*/
 	int i = 0;
 
-	if (argc == 0)
-	{
-		printf("Error\n");
-		return (0);
-	}
 	if (argc != 2)
 	{
 		printf("Error\n");
