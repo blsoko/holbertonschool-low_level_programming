@@ -36,7 +36,6 @@ int main(int argc, char *argv[])
 		{
 			if (number > num[i])
 			{
-				printf("%d\n", number);
 				number -= num[i];
 				cents++;
 				break;
@@ -45,7 +44,6 @@ int main(int argc, char *argv[])
 			{
 				if (number % num[i] == 0)
 				{
-					printf("%d\n", number);
 					number -= num[i];
 					cents++;
 					break;				}	}	}
