@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include "holberton.h"
 
 /**
  * main - check
@@ -25,7 +26,7 @@ int main(int argc, char *argv[])
 	else
 	{
 	number = atoi(argv[1]);
-	if (number < 0)
+	if (atoi(argv[1]) < 0)
 	{
 		printf("0\n");
 		return (0);
