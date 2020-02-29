@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <stdio.h>
 /**
  * _atoi - print number
  * @s: pointer
@@ -8,39 +8,22 @@
  */
 int _atoi(char *s)
 {
-	int cncel, ans, j, work;
-	int i = 0;
-	int signo = 1;
-	int hard = 10;
+	int isign = 0; /*iterador*/
+	int a_sign = 1, a_num = 0; /*acumulador*/
 
-	ans = 0;
-	while (i >= 0)
+	while (s[isign] < '0' || s[isign] > '9') /*if is not a number*/
 	{
-		work = 0;
-		cncel = 0;
-		if (s[i] == '-')
+		if (s[isign] == '-')
 		{
-			signo *= -1;
+			a_sign *= -1;
 		}
-		else if (s[i] <= '9' && s[i] >= '0')
-		{
-			cncel = 1;
-			ans = ans * 10 + s[i];
-		}
-		for (j = 0; j < hard; j++)
-		{
-			if (cncel == 1 && s[i + 1] != j)
-			{
-				work = 1;
-				break;
-			}
-		}
-		if (work == 1)
-		{
-			break;
-		}
-		i++;
+		isign++;
 	}
-	ans *= signo;
-	return (ans);
+	while (s[isign] >= '0' && s[isign] <= '9')
+	{
+		a_num = a_num * 10 + (s[isign] - '0');
+		isign++;
+	}
+	a_num *= a_sign;
+	return (a_num);
 }
