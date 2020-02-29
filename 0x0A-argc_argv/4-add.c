@@ -18,7 +18,6 @@ int main(int argc, char *argv[])
 		{
 			if (*argv[i] <  '0' && *argv[i] > '9')
 			{
-				mult += atoi(argv[i]);
 			}
 		}
 		if (i == argc)
