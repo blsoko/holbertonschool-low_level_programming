@@ -1,44 +1,34 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int main(int argc, char* argv[])
+/**
+ * main - check
+ *
+ * @argc: value
+ * @argv: value
+ *
+ * Return: check;
+ */
+
+int main(int argc __attribute__((unused)), char *argv[])
 {
 	int cents = 0;
+	int num[5] = {25, 10, 5, 2, 1};
 	int number = atoi(argv[1]);
+	int i = 0;
 
 	while (number != 0)
 	{
-		if (number % 25 == 0)
+		for (i = 0; i < 5; i++)
 		{
-			cents++;
-			number -= 25;
+			if (number % num[i] == 0)
+			{
+				cents++;
+				number -= num[i];
+				break;
+			}
 		}
-		else if (number % 10 == 0)
-		{
-			cents++;
-			number -= 10;
-		}
-		else if (number % 5 == 0)
-		{
-			cents++;
-			number -= 5;
-		}
-		else if (number % 2 == 0)
-		{
-			cents++;
-			number -= 2;
-		}
-		else if (number % 1 == 0)
-		{
-			cents++;
-			number--;
-		}
-		else
-		{
-			break;
-		}
-
 	}
-	printf ("%d\n", cents);
-	return(argc);
+	printf("%d\n", cents);
+	return (0);
 }
