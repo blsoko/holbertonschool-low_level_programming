@@ -13,10 +13,7 @@
 
 int main(int argc, char *argv[])
 {
-	int cents = 0; /*cantidad de monedas*/
-	int num[5] = {25, 10, 5, 2, 1};
-	int number; /*lo que tengo que devolver*/
-	int i = 0;
+	int cents = 0, number = 0, i = 0, num[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
@@ -35,18 +32,24 @@ int main(int argc, char *argv[])
 		number = atoi(argv[1]);
 		while (number != 0)
 		{
-		for (i = 0; i < 5; i++)
+		for (i = 0; i <= 5; i++)
 		{
-			if (number % num[i] == 0)
+			if (number > num[i])
 			{
-				cents++;
+				printf("%d\n", number);
 				number -= num[i];
+				cents++;
 				break;
 			}
-		}
-		}
-	}
+			else
+			{
+				if (number % num[i] == 0)
+				{
+					printf("%d\n", number);
+					number -= num[i];
+					cents++;
+					break;				}	}	}
+		i = 0;		}	}
 	printf("%d\n", cents);
 	return (0);
-	}
-}
+	}}
