@@ -1,8 +1,15 @@
 #include <stdlib.h>
 #include <stdio.h>
-
-int main(int argc, char* argv[])
+/**
+ * main - check
+ *
+ * @argc: value
+ * @argv: value
+ *
+ * Return: check;
+ */
+int main(int argc, char *argv[] __attribute__((unused)))
 {
-	printf ("%d\n", argc - 1);
-	return(*argv[0]);
+	printf("%d\n", argc - 1);
+	return (0);
 }
