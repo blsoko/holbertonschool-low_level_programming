@@ -11,7 +11,8 @@ int _atoi(char *s)
 	int isign = 0; /*iterador*/
 	int a_sign = 1, a_num = 0; /*acumulador*/
 
-	while ((s[isign] < '0' || s[isign] > '9') && s[isign] != '\0') /*if is not a number*/
+	while ((s[isign] < '0' || s[isign] > '9') && s[isign] != '\0')
+	/*if is not a number*/
 	{
 		if (s[isign] == '-')
 		{
