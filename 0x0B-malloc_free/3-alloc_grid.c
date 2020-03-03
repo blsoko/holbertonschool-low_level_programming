@@ -40,7 +40,12 @@ int **alloc_grid(int width, int height)
 		for (kte = 0; kte < height; kte++)
 		{
 			grid[ite][kte] = 0;
+			if (grid[ite] == NULL)
+			{
+				return (NULL);
+			}
 		}
 	}
+
 	return (grid);
 }
