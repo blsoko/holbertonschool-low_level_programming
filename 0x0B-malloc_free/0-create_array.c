@@ -26,11 +26,9 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	}
 	for (ite = 0; ite < size; ite++)
-		*(pt + ite) = c;
-	*(pt + ite) = '\0';
-	if (pt == NULL)
 	{
-		return (NULL);
+		*(pt + ite) = c;
 	}
+	*(pt + ite) = '\0';
 	return (pt);
 }
