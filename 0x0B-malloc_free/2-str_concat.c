@@ -18,12 +18,15 @@ char *str_concat(char *s1, char *s2)
 	int size = 0;
 	char *ptr; /*string concatenate*/
 
-
 	for (ite = 0; s1[ite]; ite++)
 	{
 		size++;
 	}
-	size += size;
+
+	for (ite = 0; s2[ite]; ite++)
+	{
+		size++;
+	}
 	size++;
 	ptr = malloc(size * sizeof(char));
 	if (ptr == NULL)
