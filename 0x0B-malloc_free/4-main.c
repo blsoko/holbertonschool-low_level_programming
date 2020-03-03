@@ -43,10 +43,11 @@ int main(void)
 			        {
 					        return (1);
 						    }
-		        print_grid(grid, 10, 10);
+		        print_grid(grid, 6, 4);
 			    printf("\n");
 			        grid[0][3] = 98;
 				    grid[3][4] = 402;
 				        print_grid(grid, 6, 4);
-					    return (0);
+					    free_grid(grid, 4);
+					        return (0);
 }
