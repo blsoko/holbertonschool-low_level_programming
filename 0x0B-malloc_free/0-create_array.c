@@ -16,12 +16,20 @@ char *create_array(unsigned int size, char c)
 	char *pt;
 	unsigned int ite; /*Iterador*/
 
-	pt = malloc(size * sizeof(int));
-	if (pt == NULL || size == 0)
+	if (size == 0)
+	{
 		return (NULL);
+	}
+	pt = malloc(size * sizeof(int));
+	if (pt == NULL)
+	{
+		return (NULL);
+	}
 	for (ite = 0; ite < size; ite++)
 		*(pt + ite) = c;
 	if (pt == NULL)
+	{
 		return (NULL);
+	}
 	return (pt);
 }
