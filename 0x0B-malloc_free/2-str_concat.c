@@ -17,11 +17,11 @@ char *str_concat(char *s1, char *s2)
 	int kte;
 	char *ptr; /*string concatenate*/
 
-	for (ite = 0; s1[ite] != '\0'; ite++)
+	for (ite = 0; s1 && s1[ite]; ite++)
 	{
 	}
 
-	for (kte = 0; s2[kte] != '\0'; kte++)
+	for (kte = 0; s2 && s2[kte]; kte++)
 	{
 	}
 	ptr = malloc((ite + kte + 1) * sizeof(char));
@@ -29,16 +29,15 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	for (ite = 0; s1[ite]; ite++)
+	for (ite = 0; s1 && s1[ite]; ite++)
 	{
 		*(ptr + ite) = *(s1 + ite);
 	}
-	for (kte = 0; s2[kte]; kte++)
+	for (kte = 0; s2 && s2[kte]; kte++)
 	{
 		*(ptr + ite) = *(s2 + kte);
 		ite++;
 	}
-	ite++;
 	*(ptr + ite) = '\0';
 	return (ptr);
 }
