@@ -27,6 +27,7 @@ char *create_array(unsigned int size, char c)
 	}
 	for (ite = 0; ite < size; ite++)
 		*(pt + ite) = c;
+	*(pt + ite) = '\0';
 	if (pt == NULL)
 	{
 		return (NULL);
