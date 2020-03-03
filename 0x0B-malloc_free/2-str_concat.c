@@ -15,28 +15,16 @@ char *str_concat(char *s1, char *s2)
 {
 	int ite;
 	int kte;
-	int size = 0;
-	int size_2 =0;
 	char *ptr; /*string concatenate*/
 
-	if (s1 == NULL)
+	for (ite = 0; s1[ite] != '\0'; ite++)
 	{
-		return ("");
-	}
-	if (s2 == NULL)
-	{
-		return ("");
-	}
-	for (ite = 0; s1[ite]; ite++)
-	{
-		size++;
 	}
 
-	for (ite = 0; s2[ite]; ite++)
+	for (kte = 0; s2[kte] != '\0'; kte++)
 	{
-		size_2++;
 	}
-	ptr = malloc((size_2 + size + 1) * sizeof(char));
+	ptr = malloc((ite + kte + 1) * sizeof(char));
 	if (ptr == NULL)
 	{
 		return (NULL);
