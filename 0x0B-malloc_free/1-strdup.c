@@ -16,6 +16,10 @@ char *_strdup(char *str)
 	char *vector;
 	int size = 0;
 
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 	for (ite = 0; str[ite]; ite++)
 	{
 		size++;
@@ -29,15 +33,7 @@ char *_strdup(char *str)
 	for (ite = 0; ite < size; ite++)
 	{
 		*(vector + ite) = *(str + ite);
-		if (vector == NULL)
-		{
-			return (NULL);
-		}
 	}
 	*(vector + ite) = '\0';
-	if (vector == NULL)
-	{
-		return (NULL);
-	}
 	return (vector);
 }
