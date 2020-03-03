@@ -35,5 +35,9 @@ char *_strdup(char *str)
 		}
 	}
 	*(vector + ite) = '\0';
+	if (vector == NULL)
+	{
+		return (NULL);
+	}
 	return (vector);
 }
