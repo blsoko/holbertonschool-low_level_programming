@@ -3,10 +3,9 @@
 #include <stdio.h>
 
 /**
- * argstostr - Entry point
+ * liss - Longitud
  *
- * @ac: 
- *
+ * @number: value
  *
  * Return: Always 0 (Success)
  */
@@ -14,13 +13,21 @@
 char liss(char *number)
 {
 	int i = 0;
-	
+
 	while (number[i] != '\0')
 	{
 		i++;
 	}
 	return (i);
 }
+
+/**
+ * argstostr - Entry point
+ * @ac: account
+ * @av: value
+ *
+ * Return: An argument with jump line
+ */
 
 char *argstostr(int ac, char **av)
 {
@@ -43,33 +50,24 @@ char *argstostr(int ac, char **av)
 	vector = malloc(size * sizeof(char));
 	if (vector == NULL)
 	{
+		free(vector);
 		return (NULL);
 	}
 	/*creating the string*/
 	for (i = 0; i < ac; i++)
 	{
-		while (av[i][k] != '\0')
+		for (k = 0; av[i][k] != '\0'; k++)
 		{
-			if (av[i][k] == ' ')
-			{
-				vector[j] = ' ';
-				vector[j + 1] = '\n';
-				j += 2;
-				break;
-			}
 			vector[j] = av[i][k];
-			j++;
 			if (vector == NULL)
 			{
-				return (NULL);
+			return (NULL);
 			}
-			else
-			{
-				k++;
-			}
+			j++;
 		}
-		k = 0;
+		vector[j] = '\n';
+		j++;
 	}
-	vector[j] = '\0';
+	vector[j + 1] = '\0';
 	return (vector);
 }
