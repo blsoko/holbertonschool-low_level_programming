@@ -1,5 +1,6 @@
 #ifndef HOLBERTON
 #define HOLBERTON
+char **strtow(char *str);
 void free_grid(int **grid, int height);
 char *argstostr(int ac, char **av);
 char *str_concat(char *s1, char *s2);
