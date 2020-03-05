@@ -16,8 +16,8 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *vector;
-	int i, k, j; /*iterator*/
-	unsigned int x;
+	int i, k; /*iterator*/
+	unsigned int x, j;
 
 	if (s1 == NULL)
 		s1 = "";
