@@ -19,10 +19,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int i, k; /*iterator*/
 	unsigned int x;
 
-	if (s1 == NULL)
-		s1 = "";
-	else if (s2 == NULL)
-		s2 = "";
 	for (i = 0; s1 && s1[i]; i++)
 	{
 	}
@@ -33,7 +29,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		vector[k] = s1[k];
 	}
-	for (x = 0; x <= n && s2[x] && s2 != NULL; x++)
+	for (x = 0; x <= n && s2[x] ; x++)
 	{
 		vector[k] = s2[x];
 		k++;
