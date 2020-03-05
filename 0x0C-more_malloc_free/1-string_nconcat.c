@@ -16,7 +16,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *vector;
-	int i, j, k; /*iterator*/
+	int i, k; /*iterator*/
 	unsigned int x;
 
 	if (s1 == NULL)
@@ -26,10 +26,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; s1 && s1[i]; i++)
 	{
 	}
-	for (j = 0; s2 && s2[j]; j++)
-	{
-	}
-	vector = malloc((j + i + 1) * sizeof(char));
+	vector = malloc((i + n + 1) * sizeof(char));
 	if (vector == NULL)
 		return (NULL);
 	for (k = 0; s1[k] && s1 != NULL; k++)
