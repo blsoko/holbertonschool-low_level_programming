@@ -29,11 +29,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		vector[k] = s1[k];
 	}
-	for (x = 0; x <= n && s2[x] ; x++)
+	for (x = 0; x < n && s2[x] ; x++)
 	{
 		vector[k] = s2[x];
 		k++;
 	}
-	vector[k + 1] = '\0';
+	vector[k] = '\0';
 	return (vector);
 }
