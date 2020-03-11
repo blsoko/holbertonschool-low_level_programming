@@ -43,14 +43,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	vector->name = malloc(sizeof(char) * (_strlen(name) + 1));
 	if (vector->name == NULL)
 	{
-		free(vector->name);
 		free(vector);
 		return (NULL);
 	}
 	vector->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
 	if (vector->owner == NULL)
 	{
-		free(vector->owner);
+		free(vector->name);
 		free(vector);
 		return (NULL);
 	}
