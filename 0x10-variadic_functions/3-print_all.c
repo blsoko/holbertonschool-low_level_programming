@@ -29,7 +29,8 @@ void string(va_list a)
 }
 void intfloat(va_list a)
 {
-	printf("%f, ", va_arg(a, double));
+	printf("%f, ", va_arg(a, 
+	double));
 }
 
  void print_all(const char * const format, ...)
