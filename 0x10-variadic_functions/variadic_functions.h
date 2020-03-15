@@ -2,6 +2,14 @@
 #define HOLBERTON_H
 #include <stdarg.h>
 int _putchar(char c);
+/**
+ * struct old - Entry point
+ *
+ * @op: n
+ * @f: value
+ *
+ * Return: Always 0 (Success)
+ */
 typedef struct old
 {
 	    char *op;
