@@ -17,11 +17,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *value;
 	va_list record;
 
-	va_start(record, n);
 	if (n == 0)
 	{
 		return;
 	}
+	va_start(record, n);
 	if (separator == NULL)
 	separator = "";
 	for (i = 0; i < n - 1; i++)
