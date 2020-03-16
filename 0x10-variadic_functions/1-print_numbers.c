@@ -17,10 +17,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	va_list record;
 
-	if (n == 0)
-	{
-		return;
-	}
 	va_start(record, n);
 	if (separator == NULL)
 		separator = "";
