@@ -32,7 +32,8 @@ void caracter(va_list a)
  */
 void string(va_list a)
 {
-        char *pt = va_arg(a, char*);
+	char *pt = va_arg(a, char*);
+
 	if (pt == NULL)
 	{
 		printf("(nil)");
