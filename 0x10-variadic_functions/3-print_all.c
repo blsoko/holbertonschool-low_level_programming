@@ -32,12 +32,13 @@ void caracter(va_list a)
  */
 void string(va_list a)
 {
-	if (a == NULL)
+        char *pt = va_arg(a, char*);
+	if (pt == NULL)
 	{
 		printf("(nil)");
 		return;
 	}
-	printf("%s", va_arg(a, char*));
+	printf("%s", pt);
 }
 /**
  * intfloat - Entry point

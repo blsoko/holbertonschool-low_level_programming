@@ -22,18 +22,19 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		return;
 	}
 	va_start(record, n);
-	if (separator == NULL)
-	separator = "";
-	for (i = 0; i < n - 1; i++)
+	for (i = 0; i < n; i++)
 	{
-	value = va_arg(record, char*);
-	if (value == NULL)
-	{
-		value = "(nil)";
+	        value = va_arg(record, char*);
+                if (value == NULL)
+                {
+                        printf("(nil)");
+                }
+                printf("%s", value);
+	        if (separator != NULL && (i != (n -1)))
+                {
+                        printf("%s", separator);
+                }
 	}
-	printf("%s%s", value, separator);
-	}
-	 printf("%s", va_arg(record, char*));
 	printf("\n");
 	va_end(record);
 }
