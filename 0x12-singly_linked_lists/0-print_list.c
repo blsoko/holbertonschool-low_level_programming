@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_list - Entry point
+ * print_list - print elements and values
  *
  * @h: value
  *
