@@ -1,6 +1,19 @@
 #include "lists.h"
-void myStartupFun (void) __attribute__ ((constructor));
-void myStartupFun (void) 
-{ 
-	printf ("You're beat! and yet, you must allow,\nI bore my house upon my back!\n"); 
+/**
+ * myStartupFun - Prints elements
+ */
+void myStartupFun(void) __attribute__ ((constructor));
+/**
+ * myStartupFun - Prints elements
+ */
+void myStartupFun(void)
+{
+
+
+
+printf("You're beat! and yet, you must allow,\n"
+"I bore my house upon my back!\n");
+
+
+
 }
