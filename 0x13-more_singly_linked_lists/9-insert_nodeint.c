@@ -15,7 +15,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *vector, *reference;
 	unsigned int iterator = 0;
 
-	if (*head == NULL)
+	if (head == NULL)
 	{
 		return (NULL);
 	}
@@ -33,16 +33,15 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (vector);
 	}
 	reference = *head;
-	for (iterator = 0; reference != NULL && iterator < (idx - 1); iterator++)
+	for (iterator = 0; reference != NULL ; iterator++)
 	{
+		if (iterator == (idx - 1))
+		{
+			vector->next = reference->next;
+			reference->next = vector;
+			return (vector);
+		}
 		reference = reference->next;
 	}
-
-	if (reference == NULL || reference->next == NULL)
-	{
-		return (NULL);
-	}
-	vector->next = reference->next;
-	reference->next = vector;
-	return (vector);
+	return (NULL);
 }
