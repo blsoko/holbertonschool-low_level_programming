@@ -33,18 +33,16 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (vector);
 	}
 	reference = *head;
-	while (reference != NULL)
+	for (iterator = 0; reference != NULL && iterator < (idx - 1); iterator++)
 	{
-		if (iterator == (idx - 1))
-		{
-			vector->next = reference->next;
-			reference->next = vector;
-			return (vector);
-		}
-	reference = reference->next;
-	iterator++;
+		reference = reference->next;
+	}
+
+	if (reference == NULL || reference->next == NULL)
+	{
+		return (NULL);
 	}
 	vector->next = reference->next;
 	reference->next = vector;
-	return (NULL);
+	return (vector);
 }
