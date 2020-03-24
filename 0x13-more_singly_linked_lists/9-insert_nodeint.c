@@ -44,6 +44,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	reference = reference->next;
 	iterator++;
 	}
+	vector->next = reference->next;
 	reference->next = vector;
 	return (NULL);
 }
