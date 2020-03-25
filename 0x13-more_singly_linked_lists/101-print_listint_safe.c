@@ -18,10 +18,10 @@ size_t print_listint_safe(const listint_t *head)
 	}
 	while (head != NULL)
 	{
+		iterator++;
 		if (head - (head->next) > 0)
 		{
 			printf("[%p] %d\n", (void *)head, head->n);
-			iterator++;
 		}
 		else
 		{
@@ -31,6 +31,5 @@ size_t print_listint_safe(const listint_t *head)
 		}
 		head = head->next;
 	}
-	iterator++;
 	return (iterator);
 }
