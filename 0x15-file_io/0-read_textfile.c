@@ -1,3 +1,10 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 #include "holberton.h"
 
 /**
@@ -10,28 +17,36 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	ssize_t store = 0;
-	ssize_t casteo;
-	char buf[100000];
+	int fd, reader, writer, cierre;
 
-	casteo = (ssize_t)letters;
-	if (filename == NULL)
+	char *ptr;
+
+	ptr = malloc(sizeof(char) * letters);
+	if (ptr == NULL)
 	{
 		return (0);
 	}
-	fd = open(filename, O_RDONLY);
+	fd = open(filename, O_RDWR);
 	if (fd == -1)
 	{
+		free(ptr);
 		return (0);
 	}
-	store = read(fd, buf, letters);
-	if (store != casteo)
+	reader = read(fd, ptr, letters);
+	writer = write(STDOUT_FILENO, ptr, (ssize_t)reader);
+	if (writer == -1)
 	{
-		store++;
+		free(ptr);
+		return (0);
 	}
-	buf[letters + 1] = '\0';
-	printf("%s\n", buf);
-	close(fd);
-	return (store);
+	if (reader != writer)
+	{
+		free(ptr);
+		return (0);
+	}
+	free(ptr);
+	cierre = close(fd);
+	if (cierre == -1)
+		return (0);
+	return (writer);
 }
