@@ -17,6 +17,8 @@
 
 void closefile1(int par)
 {
+	int closefile;
+
 	closefile = close(par);
 	if (closefile == -1)
 	{
@@ -34,7 +36,7 @@ void closefile1(int par)
  */
 int main(int argc, char **argv)
 {
-	int readfile, writefile, closefile;
+	int readfile, writefile;
 	int fromfile, tofile;
 	char buff[1024];
 
