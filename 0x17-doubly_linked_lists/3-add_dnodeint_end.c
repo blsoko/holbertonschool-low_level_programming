@@ -31,6 +31,8 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 			reference = reference->next;
 		}
 		reference->next = vector;
+		vector->prev = reference;
+		vector->next = NULL;
 	}
 	return (vector);
 }
