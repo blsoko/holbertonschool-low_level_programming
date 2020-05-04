@@ -1,28 +1,28 @@
 #include "lists.h"
 
 /**
- * deleteNode - remove the head at the end linked list
+ * vectoreteNode - remove the head at the end linked list
  *
  * @head: Header
- * @del: index
+ * @vector: index
  *
  * Return: 1 if succed or -1 if its wrong
  */
-int deleteNode(dlistint_t **head, dlistint_t *del)
+int deleteNode(dlistint_t **head, dlistint_t *vector)
 {
-	if (*head == NULL || del == NULL)
+	if (*head == NULL || vector == NULL)
 		return (-1);
-	if (*head == del)
-		*head = del->next;
-	if (del->next != NULL)
-		del->next->prev = del->prev;
-	if (del->prev != NULL)
-		del->prev->next = del->next;
-	free(del);
+	if (*head == vector)
+		*head = vector->next;
+	if (vector->next != NULL)
+		(vector->next)->prev = vector->prev;
+	if (vector->prev != NULL)
+		vector->prev->next = vector->next;
+	free(vector);
 	return (1);
 }
 /**
- * delete_dnodeint_at_index - remove the head at the end linked list
+ * vectorete_dnodeint_at_index - remove the head at the end linked list
  *
  * @head: Header
  * @index: index
@@ -35,7 +35,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	dlistint_t *vector;
 	int value = 0;
 
-	if (*head == NULL)
+	if (head == NULL)
 		return (-1);
 	vector = *head;
 	/*go to the pos*/
