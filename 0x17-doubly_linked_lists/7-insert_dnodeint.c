@@ -42,7 +42,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		reference->n = n;
 		reference->next = vector->next;
 		reference->prev = vector;
-		if (reference->next != NULL)
+		if (vector->next != NULL)
 			vector->next->prev = reference;
 		vector->next = reference;
 	}
