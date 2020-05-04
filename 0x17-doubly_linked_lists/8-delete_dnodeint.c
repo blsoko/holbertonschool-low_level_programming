@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * vectoreteNode - remove the head at the end linked list
+ * deleteNode - remove the head at the end linked list
  *
  * @head: Header
  * @vector: index
@@ -17,12 +17,12 @@ int deleteNode(dlistint_t **head, dlistint_t *vector)
 	if (vector->next != NULL)
 		(vector->next)->prev = vector->prev;
 	if (vector->prev != NULL)
-		vector->prev->next = vector->next;
+		(vector->prev)->next = vector->next;
 	free(vector);
 	return (1);
 }
 /**
- * vectorete_dnodeint_at_index - remove the head at the end linked list
+ * delete_dnodeint_at_index - remove the head at the end linked list
  *
  * @head: Header
  * @index: index
@@ -39,7 +39,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (-1);
 	vector = *head;
 	/*go to the pos*/
-	for (i = 1; vector != NULL && i < index; i++)
+	for (i = 0; vector != NULL && i < index; i++)
 	{
 		vector = vector->next;
 	}
