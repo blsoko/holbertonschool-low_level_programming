@@ -21,6 +21,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (vector->array == NULL)
 		return (NULL);
 	for (count = 0; count < size; )
-		vector->array[count] = NULL;
+		(vector->array)[count] = NULL;
 	return (vector);
 }
