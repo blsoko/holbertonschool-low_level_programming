@@ -2,6 +2,7 @@ CC = gcc
 SRC = main.c holberton.c
 NAME = holberton
 OBJ = $(SRC:.c=.o)
+RM= rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 all: $(OBJ)
 	$(CC) -Wall -Werror -Wextra -pedantic $(OBJ) -o $(NAME)
