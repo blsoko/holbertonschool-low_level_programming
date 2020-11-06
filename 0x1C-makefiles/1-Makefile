@@ -1,8 +1,6 @@
 #Create an executable file
-all: holberton
-
 CC = gcc
 SRC = main.c holberton.c
 
-holberton: holberton.c
-	$(CC) $(SRC) -o holberton
+all: $(SRC)
+		$(CC) $(SRC) -o holberton
