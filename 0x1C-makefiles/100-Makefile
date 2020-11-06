@@ -8,7 +8,7 @@ all: m.h $(OBJ)
 	$(CC) -Wall -Werror -Wextra -pedantic $(OBJ) -o $(NAME)
 .PHONY: clean oclean fclean re
 clean:
-	$(RM) *~ $(NAME)
+	$(RM) *~ *.swp $(NAME)
 oclean:
 	$(RM) $(OBJ)
 fclean: oclean clean
