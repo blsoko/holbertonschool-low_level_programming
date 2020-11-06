@@ -5,7 +5,7 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 all: $(SRC:.c=.o)
 	$(CC) -Wall -Werror -Wextra -pedantic $(SRC:.c=.o) -o $(NAME)
 clean:
-	$(RM) *~ $(NAME)
+	rm -f *~ $(NAME)
 oclean:
 	$(RM) $(SRC:.c=.o)
 fclean: oclean clean
